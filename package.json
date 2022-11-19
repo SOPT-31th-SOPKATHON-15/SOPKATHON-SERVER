@@ -1,6 +1,6 @@
 {
-  "name": "sopkathon",
-  "version": "1.0.0",
+  "name": "soptkathon",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "https://github.com/SOPT-31th-SOPKATHON-15/SOPKATHON-SERVER.git",
   "author": "hyeonjeong Park <py0429@ewhain.net>",
