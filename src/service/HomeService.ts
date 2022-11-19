@@ -25,7 +25,8 @@ const getHomeProduct = async () => {
         }
         const timeObj = {
             month: array,
-            price: priceSum
+            price: priceSum,
+            counts: data.length
         }
         finalArray.push(timeObj);
     }
