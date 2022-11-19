@@ -23,7 +23,16 @@ const getProducts = async (year: string, month: string) => {
             return [];
         }
     }
-    return products;
+
+    const results = products.sort(function(a,b){
+        const numA = Number(a.day);
+        const numB = Number(b.day);
+        
+        if(numA > numB) return -1;
+        else if (numB > numA) return 1;
+        else return 0;
+    });
+    return results;
 };
 
 const getProductById = async(productId: number) => {
