@@ -3,7 +3,7 @@
 ## service
 
 ---
-* 서비스 이름; 참참참
+* 서비스 이름: 참참참
 * 소개 : 낭비하는 지출을 참았을 때 상품명과 금액을 표시하고 리스트로 참은 금액을 볼 수 있는 서비스
 
 <br/><br/>
@@ -94,7 +94,8 @@ https://jade-savory-505.notion.site/Code-Convention-d4a469f20a184c88b1e46e4262f8
 ---
 
 ## ERD
-<img width="282" alt="image" src="https://user-images.githubusercontent.com/81394850/202855057-b1bc1d96-25ef-4dd4-92d9-a5ed669e456e.png">
+![Untitled (1)](https://user-images.githubusercontent.com/75441684/202859524-664084f9-fb85-4a1a-89b0-b582f1221d8b.png)
+
 ---
 
 ## schema.prisma
