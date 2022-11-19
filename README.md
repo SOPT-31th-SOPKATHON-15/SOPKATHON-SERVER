@@ -177,3 +177,6 @@ model Time {
 ---
 ##  server architecture
 
+<img width="437" alt="image" src="https://user-images.githubusercontent.com/81394850/202871905-7fc7bba8-486d-4751-b793-7343b182c2f3.png">
+
+
