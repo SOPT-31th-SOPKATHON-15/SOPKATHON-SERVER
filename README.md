@@ -110,14 +110,13 @@ datasource db {
 }
 
 model Product {
-  id          Int     @id @default(autoincrement())
-  productName String  @db.VarChar(200)
+  id          Int      @id @default(autoincrement())
+  productName String   @db.VarChar(200)
   price       Int
   contents    String?
-  year        Int
-  month       Int
   userId      Int
-  User        User    @relation(fields: [userId], references: [id], onDelete: Cascade, map: "product_user_id_fk")
+  date        DateTime @db.Timestamp(6) @default(now())
+  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade, map: "product_user_id_fk")
 }
 
 model User {
@@ -125,6 +124,7 @@ model User {
   name    String    @unique @db.VarChar(50)
   Product Product[]
 }
+
 ```
 ---
 
