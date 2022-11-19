@@ -15,13 +15,14 @@ const getHomeProduct = async () => {
         let priceSum = 0;
 
         for (const time of data) {
-
+            
             const price = await prisma.product.findUnique({
                 where: {
                     id: time.productId,
                 }
             })
-            priceSum += price.price;
+            if (price != null) priceSum += price.price;
+            else priceSum += 0;
         }
         const timeObj = {
             month: array,
