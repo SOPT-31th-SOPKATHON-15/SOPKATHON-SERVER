@@ -16,7 +16,7 @@ const writeProduct = async(productName: string, price: number, contents: string,
 };
 
 const writeTime = async(productId: number, year: string, month: string, day: string , timeString: string) => {
-    const time = await prisma.Time.create({
+    const time = await prisma.time.create({
         data: {
             productId: productId,
             year: year,
