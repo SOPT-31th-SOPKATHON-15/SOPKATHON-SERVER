@@ -94,7 +94,7 @@ https://jade-savory-505.notion.site/Code-Convention-d4a469f20a184c88b1e46e4262f8
 ---
 
 ## ERD
-![Untitled (1)](https://user-images.githubusercontent.com/75441684/202859524-664084f9-fb85-4a1a-89b0-b582f1221d8b.png)
+<img width="238" alt="image" src="https://user-images.githubusercontent.com/81394850/202863835-d4094d47-1440-473e-b209-6210db4fa18b.png">
 
 ---
 
