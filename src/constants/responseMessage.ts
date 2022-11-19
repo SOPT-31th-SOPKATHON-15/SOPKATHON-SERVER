@@ -31,6 +31,9 @@ export default {
   INTERNAL_SERVER_ERROR: "서버 내 오류",
 
   // 팝업 정보 조회성공
-  GET_POP_UP_SUCCESS: "팝업 상품 조회 성공"
+  GET_POP_UP_SUCCESS: "팝업 상품 조회 성공",
+
+  // home 조회 성공
+  GET_HOME_SUCCESS: "홈 조회 성공",
 
 };

@@ -10,7 +10,7 @@ const getProduct = async (req: Request, res: Response) => {
         return res.status(statusCode.BAD_REQUEST).json({ status: statusCode.BAD_REQUEST, message: responseMessage.NOT_FOUND })
     }
     const data = await popUpService.getProduct(+productId);
-    return res.status(statusCode.OK).json({ status: statusCode.OK, success: true, message: responseMessage.GET_POP_UP_SUCCESS, data: { todayProductList: data } });
+    return res.status(statusCode.OK).json({ status: statusCode.OK, success: true, message: responseMessage.GET_POP_UP_SUCCESS, data: { monthList: data } });
 }
 
 const popUpController = {
