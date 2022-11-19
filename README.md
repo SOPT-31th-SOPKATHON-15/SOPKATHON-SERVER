@@ -3,8 +3,9 @@
 ## service
 
 ---
-* 서비스 이름; 참참참
-* 소개 : 낭비하는 지출을 참았을 때 상품명과 금액을 표시하고 리스트로 참은 금액을 볼 수 있는 서비스
+* 서비스 이름: 참참참
+* 소개 : 티끌모아 태산이라고 하지만 실천은 너무 힘들었다면, 참참참과 즐겁게 절약습관을 시작해보는 서비스
+
 
 <br/><br/>
 
@@ -94,7 +95,8 @@ https://jade-savory-505.notion.site/Code-Convention-d4a469f20a184c88b1e46e4262f8
 ---
 
 ## ERD
-<img width="282" alt="image" src="https://user-images.githubusercontent.com/81394850/202855057-b1bc1d96-25ef-4dd4-92d9-a5ed669e456e.png">
+<img width="238" alt="image" src="https://user-images.githubusercontent.com/81394850/202863835-d4094d47-1440-473e-b209-6210db4fa18b.png">
+
 ---
 
 ## schema.prisma
@@ -109,14 +111,13 @@ datasource db {
 }
 
 model Product {
-  id          Int     @id @default(autoincrement())
-  productName String  @db.VarChar(200)
+  id          Int      @id @default(autoincrement())
+  productName String   @db.VarChar(200)
   price       Int
   contents    String?
-  year        Int
-  month       Int
   userId      Int
-  User        User    @relation(fields: [userId], references: [id], onDelete: Cascade, map: "product_user_id_fk")
+  date        DateTime @db.Timestamp(6) @default(now())
+  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade, map: "product_user_id_fk")
 }
 
 model User {
@@ -124,6 +125,7 @@ model User {
   name    String    @unique @db.VarChar(50)
   Product Product[]
 }
+
 ```
 ---
 
