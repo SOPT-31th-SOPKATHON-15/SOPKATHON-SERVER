@@ -3,7 +3,8 @@
 ## service
 
 ---
-
+* 서비스 이름; 참참참
+* 소개 : 낭비하는 지출을 참았을 때 상품명과 금액을 표시하고 리스트로 참은 금액을 볼 수 있는 서비스
 
 <br/><br/>
 
@@ -13,9 +14,9 @@
 
 ---
 
-- 현정
-- 다현
-- 수린
+- 현정 : 홈 조회, 리스트 팝업창 조회
+- 다현 : 상품 리스트 조회
+- 수린 : 작성하기
 
 <br/><br/>
 
@@ -63,7 +64,9 @@
 - [modify] : 코드 수정 (기능의 변화가 있을 때)
 - [chore] : gradle 세팅, 위의 것 이외에 거의 모든 것
 
-### ✔️ 브랜치 전략
+### 브랜치 전략
+
+---
 
 - `main` : 메인 브랜치
 - `main`에 직접적인 commit, push는 가급적 금지합니다
@@ -73,14 +76,85 @@
   `git branch feature/기능`
 - 작은 기능별로 `commit message rules`에 따라 커밋을 진행합니다
 - 작업 완료 시 `main` 브랜치로 Pull Request를 보냅니다
-- 팀원과 코드리뷰를 진행한 후, 최종적으로 `main` 브랜치로 merge합니
+- 팀원과 코드리뷰를 진행한 후, 최종적으로 `main` 브랜치로 merge합니다
 - 다 쓴 브랜치는 삭제합니다
 
+### ✔️ Code Convention
+https://jade-savory-505.notion.site/Code-Convention-d4a469f20a184c88b1e46e4262f8adbd
+
+---
 
 ## API DOCS
 
-> API 명세서 링크: 
+> API 명세서 링크: https://jade-savory-505.notion.site/API-Docs-6b7e59da93424d5a9aac4a7ebd4e83fa
 
 <br/><br/>
+---
 
+## ERD
+<img width="282" alt="image" src="https://user-images.githubusercontent.com/81394850/202855057-b1bc1d96-25ef-4dd4-92d9-a5ed669e456e.png">
+---
+
+## schema.prisma
+```
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id          Int     @id @default(autoincrement())
+  productName String  @db.VarChar(200)
+  price       Int
+  contents    String?
+  year        Int
+  month       Int
+  userId      Int
+  User        User    @relation(fields: [userId], references: [id], onDelete: Cascade, map: "product_user_id_fk")
+}
+
+model User {
+  id      Int       @id @default(autoincrement())
+  name    String    @unique @db.VarChar(50)
+  Product Product[]
+}
+```
+---
+
+## Package.json
+```
+{
+  "name": "sopkathon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SOPT-31th-SOPKATHON-15/SOPKATHON-SERVER.git",
+  "author": "hyeonjeong Park <py0429@ewhain.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc && node dist",
+    "db:pull": "npx prisma db pull",
+    "db:push": "npx prisma db push",
+    "generate": "npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.6.1",
+    "express": "^4.18.2",
+    "prisma": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "nodemon": "^2.0.20"
+  }
+}
+
+```
+
+---
+##  server architecture
 
