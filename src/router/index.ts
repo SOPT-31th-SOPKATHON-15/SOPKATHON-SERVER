@@ -1,5 +1,5 @@
 import { Router } from "express";
-import popUpRouter from "./popUpRouter";
+import popUpRouter from "./PopUpRouter";
 import writeRouter from "./writeRouter";
 import homeRouter from "./HomeRouter";
 import productRouter from "./ProductRouter";
