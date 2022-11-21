@@ -2,7 +2,6 @@
 
 ## service
 
----
 * 서비스 이름: 참참참
 * 소개 : 참을 인 세번이면, 텅장을 면한다. 소비습관을 개선하기 위해 시각화하여 절약을 유도한다.
 
@@ -18,7 +17,6 @@
 
 ## 각자 개발 담당 부분
 
----
 
 - 현정 : 홈 조회, 리스트 팝업창 조회
 - 다현 : 상품 리스트 조회
@@ -46,6 +44,8 @@
     ├── constants
     └── index.ts 
 ```
+<br/><br/>
+---
 
 ## Git convention
 ### ✔️ Commit Convention
@@ -96,13 +96,13 @@ https://jade-savory-505.notion.site/Code-Convention-d4a469f20a184c88b1e46e4262f8
 
 > API 명세서 링크: https://jade-savory-505.notion.site/API-Docs-6b7e59da93424d5a9aac4a7ebd4e83fa
 
-<br/><br/>
 ---
-
+<br/><br/>
 ## ERD
 <img width="238" alt="image" src="https://user-images.githubusercontent.com/81394850/202863835-d4094d47-1440-473e-b209-6210db4fa18b.png">
 
 ---
+<br/><br/>
 
 ## schema.prisma
 ```
@@ -143,6 +143,7 @@ model Time {
 
 ```
 ---
+<br/><br/>
 
 ## Package.json
 ```
@@ -175,6 +176,7 @@ model Time {
 ```
 
 ---
+<br/><br/>
 ##  server architecture
 
 <img width="437" alt="image" src="https://user-images.githubusercontent.com/81394850/202871905-7fc7bba8-486d-4751-b793-7343b182c2f3.png">
